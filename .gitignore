@@ -1,0 +1,10 @@
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Folder config file
+.Directory
+
+# Mac system files
+.DS_Store
