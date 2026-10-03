@@ -30,5 +30,16 @@ Si deseas ver la interfaz en tu computadora, sigue estos pasos:
 3. **Abre el archivo principal:**
    Busca el archivo `index.html` y dale doble clic para abrirlo en cualquier navegador web (Chrome, Edge, Firefox, etc.).
 
+## 🛠️ Estado del Proyecto & Próximos Pasos (Roadmap)
+
+Este proyecto se encuentra actualmente en desarrollo activo (**Work in Progress**). 
+
+- [x] Estructuración principal de la interfaz con HTML semántico.
+- [x] Estilizado del panel izquierdo de comandos (`POWER`, `SYSTEM`, `VISUAL`, etc.).
+- [ ] Maquetación del radar/osciloscopio del panel `VISUAL` con CSS de alta precisión.
+- [ ] Grid de estado de sensores inferiores (`AIR TEMPERATURE`, `GAS CHROMATOGRAPH`).
+- [ ] (Opcional/Futuro) Agregar animaciones intermitentes (blinking) o simulación de datos dinámicos con JS.
+
+
 ---
 *La verdad está ahí afuera...* 👽
