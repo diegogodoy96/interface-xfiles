@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interface X-Files</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <main class="screen">
+        <header class="header">
+            <div class="header-top">
+                <span>PROJECT: FIREWALKER</span>
+                <span>C.I.T.</span>
+                <span>MT. AVALON</span>
+            </div>
+            <div class="header-title">
+                REMOTE TELEMETRY CONTROL SYSTEM
+            </div>
+        </header>
+
+        <section class="main-content">
+            <nav class="menu">
+
+                <div class="menu-section">
+                    <span>POWER</span>
+                    <span>SYSTEM</span>
+                    <span>OPEN</span>
+                    <span>SESSION</span>
+                    <span>VISUAL</span>
+                    <span>CONTROL</span>
+                    <span>CANCEL</span>
+                    <span>OK</span>
+                </div>
+            </nav>
+
+            <section class="system-status">
+                <section class="system-status">
+
+                    <div class="status-title">
+
+                        <h2>SYSTEM STATUS</h2>
+
+                        <span class="status-indicator">▥</span>
+
+                    </div>
+
+                        <div class="system-tools">
+
+                            <span class="tool-icon">◫</span>
+                            <span class="tool-icon">◩</span>
+                            <span class="tool-icon">✥</span>
+
+                        </div>
+
+                        <div class="system-controls">
+
+                            <div class="acquisition-control">
+
+                                <h3>Acquisition</h3>
+
+                                <label>
+                                    <input type="radio" name="acquisition" value="on">
+                                    on
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="acquisition" value="off">
+                                    off
+                                </label>
+
+                            </div>
+
+                            <div class="analysis-control">
+
+                                <h3>Analysis</h3>
+
+                                <label>
+                                    <input type="radio" name="analysis" value="on">
+                                    on
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="analysis" value="off">
+                                    off
+                                </label>
+
+                            </div>
+
+                            <div class="update-control">
+
+                                <h3>Update Period</h3>
+
+                                <div class="update-value">
+                                    <input type="number" value="1.00" step="0.01">
+                                    <span>(sec)</span>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="5"
+                                    value="1"
+                                >
+
+                                <div class="range-labels">
+                                    <span>0</span>
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                </div>
+
+                            </div>
+
+                            <div class="interval-control">
+
+                                <h3>Intervals</h3>
+
+                                <div class="interval-row">
+
+                                    <input
+                                        type="number"
+                                        value="20"
+                                        min="0"
+                                    >
+
+                                    <div class="interval-tools">
+                                        <span class="interval-tool">↻</span>
+                                        <span class="interval-tool">→</span>
+                                        <span class="interval-tool">•••</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </section>
+            </section>
+
+            <section class="visual">
+
+                <h2>VISUAL</h2>
+
+                <div class="visual-screen">
+
+                    <div class="axis-label x-axis">
+                        X
+                    </div>
+
+                    <div class="target"></div>
+
+                </div>
+
+                <div class="axis-controls">
+
+                    <div class="axis-control">
+
+                        <span class="axis-name">Y</span>
+
+                        <span class="axis-arrow">↔</span>
+
+                        <span class="axis-value">236°</span>
+
+                    </div>
+
+                    <div class="axis-control">
+
+                        <span class="axis-name">Z</span>
+
+                        <span class="axis-arrow">↕</span>
+
+                        <span class="axis-value">034°</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <section class="sensor-status">
+
+            <h2>SENSOR ARRAY STATUS</h2>
+
+            <div class="sensor-grid">
+
+                <div class="sensor-main">
+
+                    <span class="sensor-name">AIR TEMPERATURE</span>
+
+                    <div class="sensor-values">  
+                        <div class="sensor">   
+                            <span class="sensor-label">°C</span>
+                            <span class="sensor-value">143</span>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="sensor-group">
+
+                    <span class="sensor-name">GAS CHROMATOGRAPH</span>
+                    <span class="sensor-unit">MOL.%</span>
+
+                    <div class="sensor-values">
+
+                        <div class="sensor">
+                            <span class="sensor-label">CO2</span>
+                            <span class="sensor-value">82.7</span>
+                        </div>
+
+                        <div class="sensor">
+                            <span class="sensor-label">H2S</span>
+                            <span class="sensor-value">63.3</span>
+                        </div>
+
+                        <div class="sensor">
+                            <span class="sensor-label">SO2</span>
+                            <span class="sensor-value">17.0</span>
+                        </div>
+
+                        <div class="sensor">
+                            <span class="sensor-label">N</span>
+                            <span class="sensor-value">60.0</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="sensor-main">
+                    <span class="sensor-name">ANEMOMETER</span>
+                        <div class="sensor-values">  
+                            <div class="sensor"> 
+                                <span class="sensor-label">KPH</span>
+                                <span class="sensor-value">1.02</span> <!--falta agregar unidad de medida 'KPH'-->
+                            </div>
+                        </div>
+                </div>
+
+                <div class="sensor-group">
+
+                    <span class="sensor-name">LOG PARTIAL PRESSURE</span>
+
+                    <div class="sensor-values">
+
+                        <div class="sensor">
+                            <span class="sensor-label">CO2</span>
+                            <span class="sensor-value">-.087</span>
+                        </div>
+
+                        <div class="sensor">
+                            <span class="sensor-label">H2S</span>
+                            <span class="sensor-value">-1.03</span>
+                        </div>
+
+                        <div class="sensor">
+                            <span class="sensor-label">SO2</span>
+                            <span class="sensor-value">-5.74</span>
+                        </div>
+
+                        <div class="sensor">
+                            <span class="sensor-label">N</span>
+                            <span class="sensor-value">-1.88</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>

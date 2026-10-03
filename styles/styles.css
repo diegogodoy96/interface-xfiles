@@ -1,0 +1,666 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #020504;
+    color: #7ca8a0;
+    font-family: "Share Tech Mono", monospace;
+}
+/*-------------*/
+
+.screen {
+    width: 1200px;
+    min-height: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #07110f;
+    border: 1px solid #365c55;
+    border-radius: 4px;
+    box-shadow:
+        0 0 20px rgba(55, 120, 105, 0.08),
+        inset 0 0 30px rgba(55, 120, 105, 0.04);
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #294943;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7ca8a0;
+    font-size: 18px;
+}
+
+.header-title {
+    text-align: center;
+    margin-top: 12px;
+    color: #a3c9c0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+/*-------------*/
+.main-content {
+    display: grid;
+    grid-template-columns: 150px 1fr 300px;
+    gap: 25px;
+    min-height: 450px;
+}
+/*-------------*/
+.menu,
+.system-status,
+.visual {
+    min-height: 450px;
+    border: 1px solid #294943;
+    background-color: rgba(5, 15, 13, 0.7);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px;
+    color: #7ca8a0;
+    font-size: 15px;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+/**/
+.menu-section span {
+    padding: 6px 4px;
+    border-left: 2px solid transparent;
+    /*prueba para agregar borde al boton 26/09*/
+    border: 1px solid #365c55;
+    /*prueba esquinas bordeadas*/
+    border-radius: 5px;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        text-shadow 0.2s ease;
+    /*agregué para centrar texto*/
+    text-align: center;
+}
+
+.menu-section span:hover {
+    color: #a3c9c0;
+    background-color: rgba(80, 150, 135, 0.06);
+    border-left-color: #7ca8a0;
+    text-shadow: 0 0 6px rgba(124, 168, 160, 0.3);
+}
+
+
+/*-------------*/
+.system-status {
+    padding: 15px;
+    color: #7ca8a0;
+}
+
+.system-status h2 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid #365c55;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid #1d3632;
+    transition: background-color 0.2s ease;
+
+}
+/*-------------*/
+.visual {
+    padding: 15px;
+    color: #7ca8a0;
+}
+
+.visual h2 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid #365c55;
+    padding-bottom: 10px;
+    /*centrado de texto*/
+    text-align: center;
+}
+
+.visual-screen {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    border: 1px solid #365c55;
+    background-color: #050c0b;
+    overflow: hidden;
+}
+
+.visual-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            transparent 49%,
+            #18322e 50%,
+            transparent 51%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 49%,
+            #18322e 50%,
+            transparent 51%
+        );
+    background-size: 50px 50px;
+    opacity: 0.7;
+}
+
+.target {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #7ca8a0;
+    border-radius: 50%;
+}
+
+/*---------------------------------*/
+
+.sensor-status {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #365c55;
+    color: #7ca8a0;
+    box-shadow: inset 0 0 12px rgba(80, 150, 135, 0.035);
+}
+
+.sensor-status h2 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid #365c55;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.sensor-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 25px 30px;
+}
+
+.sensor {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-left: 1px solid #365c55;
+}
+
+.sensor-name {
+    font-size: 12px;
+    padding-bottom: 8px;
+    /*margin-bottom: 8px;*/
+    color: #52756e;
+        border-bottom: 1px solid #1d3632;
+
+}
+
+.sensor-value {
+    font-size: 24px;
+    color: black;
+    text-shadow: 0 0 8px rgba(124, 168, 160, 0.3);
+}
+
+/* efecto lineas opacas */
+
+.screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.screen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 3px,
+        rgba(124, 168, 160, 0.025) 4px
+    );
+    animation: scanlines 8s linear infinite;
+}
+
+
+.header-title,
+.system-status h2,
+.visual h2,
+.sensor-status h2 {
+    text-shadow: 0 0 6px rgba(124, 168, 160, 0.25);
+}
+
+/* para animación en campo visual*/
+.target {
+    animation: target-blink 1.5s infinite;
+}
+@keyframes target-blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* esto es para la animación del screen::after*/
+@keyframes scanlines {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 40px;
+    }
+}
+
+/* esto es otra animación para el cuadro VISUAL */
+
+.visual-screen::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgba(124, 168, 160, 0.15);
+    animation: visual-scan 4s linear infinite;
+}
+
+@keyframes visual-scan {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+/*para status row*/
+
+.status-row span:last-child {
+    color: #a3c9c0;
+}
+
+/* Para system tools */
+
+.system-tools {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tool-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #365c55;
+
+    color: #7ca8a0;
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.system-controls {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+}
+
+.system-controls h3 {
+    margin: 0 0 10px 0;
+
+    font-size: 14px;
+    font-weight: normal;
+
+    color: #7ca8a0;
+}
+
+.acquisition-control,
+.analysis-control {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.system-controls input[type="radio"] {
+    accent-color: #7ca8a0;
+}
+
+.acquisition-control {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.analysis-control {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.update-control {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.interval-control {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.update-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.update-value {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.update-value input[type="number"] {
+    width: 70px;
+    height: 24px;
+
+    padding: 2px 5px;
+
+    background-color: #07110f;
+    border: 1px solid #365c55;
+
+    color: #a3c9c0;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.update-value span {
+    font-size: 12px;
+}
+
+.update-control input[type="range"] {
+    width: 130px;
+    accent-color: #7ca8a0;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+
+    width: 130px;
+
+    font-size: 11px;
+    color: #52756e;
+}
+
+.interval-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.interval-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.interval-control input[type="number"] {
+    width: 70px;
+    height: 24px;
+
+    padding: 2px 5px;
+
+    background-color: #07110f;
+    border: 1px solid #365c55;
+
+    color: #a3c9c0;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.acquisition-control label,
+.analysis-control label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 12px;
+    color: #7ca8a0;
+}
+
+.system-controls input[type="radio"] {
+    margin: 0;
+}
+
+.tool-icon:hover {
+    color: #a3c9c0;
+    background-color: rgba(80, 150, 135, 0.06);
+}
+
+.status-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #294943;
+
+    margin-bottom: 20px;
+}
+
+.status-title h2 {
+    margin: 0;
+    padding-bottom: 10px;
+
+    border: none;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 22px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid #365c55;
+
+    color: #7ca8a0;
+    font-size: 12px;
+}
+
+.interval-tools {
+    display: flex;
+    gap: 5px;
+}
+
+.interval-tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 26px;
+    height: 24px;
+
+    border: 1px solid #365c55;
+
+    color: #7ca8a0;
+    font-size: 11px;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.interval-tool:hover {
+    color: #a3c9c0;
+    background-color: rgba(80, 150, 135, 0.06);
+}
+
+.x-axis {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #365c55;
+
+    color: #7ca8a0;
+    font-size: 13px;
+
+    z-index: 2;
+}
+
+.axis-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    margin-top: 12px;
+}
+
+.axis-control {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 70px;
+
+    border: 1px solid #365c55;
+}
+
+.axis-name {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+
+    font-size: 13px;
+}
+
+.axis-arrow {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.axis-value {
+    margin-top: 5px;
+
+    font-size: 16px;
+    color: #a3c9c0;
+    text-shadow: 0 0 6px rgba(124, 168, 160, 0.2);
+
+}
+
+/* sensor array status */
+
+.sensor-main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-left: 1px solid #365c55;
+}
+
+.sensor-group {
+    position: relative;
+    padding: 10px;
+    border-left: 1px solid #365c55;
+}
+
+.sensor-unit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 11px;
+    color: #52756e;
+}
+
+.sensor-values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    margin-top: 15px;
+        background-color: #365c55; /* color de fondo */
+
+}
+
+.sensor {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sensor-label {
+    font-size: 11px;
+    color: black;
+}
+
+.sensor-main .sensor-value {
+    /*margin-top: 15px;*/
+    background-color: #365c55; /* color de fondo */
+    text-align: center;
+    
+    color: #020504;
+}
+
+.sensor-group .sensor-name {
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1d3632;
+
+}
+
+.sensor-values .sensor-value {
+    font-size: 20px;
+}
+
+.sensor-values .sensor {
+    padding: 8px;
+    border-left: 1px solid #1d3632;
+}
+
