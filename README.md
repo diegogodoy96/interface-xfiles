@@ -4,6 +4,8 @@ Una interfaz web estática inspirada en el universo de **The X-Files** (Los Expe
 
 El objetivo principal es demostrar habilidades sólidas en la estructura, maquetación y diseño visual utilizando únicamente tecnologías web nativas.
 
+En la carpeta "referencia" guardé unos frames del capítulo "Firewalker" (T2E9) en el cual aparece la interfaz.
+
 ## 🚀 Tecnologías Utilizadas
 
 * **HTML5:** Estructuración semántica del contenido de la interfaz.
