@@ -225,6 +225,7 @@ body {
     font-size: 24px;
     color: black;
     text-shadow: 0 0 8px rgba(124, 168, 160, 0.3);
+    text-align: right;
 }
 
 /* efecto lineas opacas */
@@ -600,8 +601,13 @@ body {
 .sensor-main {
     display: flex;
     flex-direction: column;
+
     padding: 10px;
+
     border-left: 1px solid #365c55;
+    background-color: rgba(5, 15, 13, 0.5);
+
+    min-height: 102px;
 }
 
 .sensor-group {
@@ -623,29 +629,32 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-
     margin-top: 15px;
-        background-color: #365c55; /* color de fondo */
-
 }
 
 .sensor {
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    padding: 10px;
+
+    border: 1px solid #365c55;
+    background-color: #365c55;
+
+    min-height: 65px;
 }
 
 .sensor-label {
-    font-size: 11px;
+    font-size: 30px;
     color: black;
 }
 
 .sensor-main .sensor-value {
-    /*margin-top: 15px;*/
-    background-color: #365c55; /* color de fondo */
+    /*border: 1px solid #365c55;*/
+
+    width: 90px;
     text-align: center;
-    
-    color: #020504;
 }
 
 .sensor-group .sensor-name {
@@ -656,11 +665,16 @@ body {
 }
 
 .sensor-values .sensor-value {
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .sensor-values .sensor {
     padding: 8px;
-    border-left: 1px solid #1d3632;
+    border: 1px solid #365c55;
+}
+
+.sensor-main .sensor-name {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1d3632;
 }
 
