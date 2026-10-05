@@ -588,7 +588,7 @@ body {
 }
 
 .interval-tool:hover {
-    color: #a3c9c0;
+    /*color: #a3c9c0;*/
     background-color: rgba(80, 150, 135, 0.06);
 }
 
