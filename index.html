@@ -42,113 +42,114 @@
             </nav>
 
             <section class="system-status">
-                <section class="system-status">
 
-                    <div class="status-title">
 
-                        <h2>SYSTEM STATUS</h2>
+                <!-- 1. Cabecera del panel con el indicador de disquete retro -->
+                <div class="status-title">
+                    <h2>SYSTEM STATUS</h2>
+                    <svg class="status-indicator-svg" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="6" y1="2" x2="6" y2="8" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="18" y1="2" x2="18" y2="8" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="9" y="2" width="6" height="5" fill="none" stroke="currentColor" stroke-width="1"/>
+                    <rect x="6" y="13" width="12" height="9" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                </div>
 
-                        <span class="status-indicator">▥</span>
+                <!-- 2. Herramientas superiores: Los 4 íconos misteriosos de la pantalla -->
+                        <div class="system-tools">
+                            <div class="tool-icon">
+                            <svg viewBox="0 0 16 16"><path d="M2 2h12v12H2V2zm6 0v12" fill="none" stroke="currentColor"/></svg>
+                            </div>
+                            <div class="tool-icon">
+                            <svg viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="8" fill="none" stroke="currentColor"/><rect x="5" y="6" width="6" height="4" fill="none" stroke="currentColor"/></svg>
+                            </div>
+                            <div class="tool-icon">
+                            <svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" fill="none" stroke="currentColor"/><path d="M2 2l12 12V2H2z" fill="currentColor"/></svg>
+                            </div>
+                            <div class="tool-icon">
+                            <svg viewBox="0 0 16 16"><path d="M8 1v14M1 8h14M4 8l4-4 4 4-4 4-4-4z" fill="none" stroke="currentColor"/></svg>
+                            </div>
+                        </div>
+
+                        <!-- 3. Controles Inferiores (Grid) -->
+                        <div class="system-controls">
+                            
+                            <!-- ACQUISITION -->
+                            <div class="acquisition-control">
+                            <h3>Acquisition</h3>
+                            <label class="custom-radio">
+                                <input type="radio" name="acq" checked>
+                                <span class="radio-box"></span> on
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="acq">
+                                <span class="radio-box"></span> off
+                            </label>
+                            </div>
+
+                            <!-- UPDATE PERIOD -->
+                            <div class="update-control">
+                            <h3>Update Period</h3>
+                            <div class="update-value">
+                                <input type="number" value="1.00" step="0.01" readonly>
+                                <span>(sec)</span>
+                            </div>
+                            
+                            <div class="telemetry-slider-graphic">
+                                <svg viewBox="0 0 120 25">
+                                <line x1="10" y1="12" x2="110" y2="12" stroke="currentColor" stroke-width="1"/>
+                                <line x1="10" y1="8" x2="10" y2="16" stroke="currentColor" stroke-width="1"/>
+                                <line x1="30" y1="10" x2="30" y2="14" stroke="currentColor" stroke-width="0.8"/>
+                                <line x1="50" y1="10" x2="50" y2="14" stroke="currentColor" stroke-width="0.8"/>
+                                <line x1="70" y1="10" x2="70" y2="14" stroke="currentColor" stroke-width="0.8"/>
+                                <line x1="90" y1="10" x2="90" y2="14" stroke="currentColor" stroke-width="0.8"/>
+                                <line x1="110" y1="8" x2="110" y2="16" stroke="currentColor" stroke-width="1"/>
+                                <polygon points="30,8 26,2 34,2" fill="currentColor"/>
+                                </svg>
+                                <div class="range-labels">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- ANALYSIS -->
+                            <div class="analysis-control">
+                            <h3>Analysis</h3>
+                            <label class="custom-radio">
+                                <input type="radio" name="analysis">
+                                <span class="radio-box"></span> on
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="analysis" checked>
+                                <span class="radio-box"></span> off
+                            </label>
+                            </div>
+
+                            <!-- INTERVALS -->
+                            <div class="interval-control">
+                            <h3>Intervals</h3>
+                            <div class="interval-row">
+                                <input type="number" value="20" readonly>
+                                <button class="interval-tool">&#x21BB;</button>
+                                <button class="interval-tool">&#x2192;</button>
+                                <button class="interval-tool">•••</button>
+                            </div>
+                            <!--<div class="interval-tools">
+                                <button class="interval-tool">&#x21BB;</button>
+                                <button class="interval-tool">&#x2192;</button>
+                                <button class="interval-tool">•••</button>
+                            </div>-->
+                            </div>
 
                     </div>
 
-                        <div class="system-tools">
 
-                            <span class="tool-icon">◫</span>
-                            <span class="tool-icon">◩</span>
-                            <span class="tool-icon">✥</span>
-
-                        </div>
-
-                        <div class="system-controls">
-
-                            <div class="acquisition-control">
-
-                                <h3>Acquisition</h3>
-
-                                <label>
-                                    <input type="radio" name="acquisition" value="on">
-                                    on
-                                </label>
-
-                                <label>
-                                    <input type="radio" name="acquisition" value="off">
-                                    off
-                                </label>
-
-                            </div>
-
-                            <div class="analysis-control">
-
-                                <h3>Analysis</h3>
-
-                                <label>
-                                    <input type="radio" name="analysis" value="on">
-                                    on
-                                </label>
-
-                                <label>
-                                    <input type="radio" name="analysis" value="off">
-                                    off
-                                </label>
-
-                            </div>
-
-                            <div class="update-control">
-
-                                <h3>Update Period</h3>
-
-                                <div class="update-value">
-                                    <input type="number" value="1.00" step="0.01">
-                                    <span>(sec)</span>
-                                </div>
-
-                                <input
-                                    type="range"
-                                    min="0"
-                                    max="5"
-                                    value="1"
-                                >
-
-                                <div class="range-labels">
-                                    <span>0</span>
-                                    <span>1</span>
-                                    <span>2</span>
-                                    <span>3</span>
-                                    <span>4</span>
-                                    <span>5</span>
-                                </div>
-
-                            </div>
-
-                            <div class="interval-control">
-
-                                <h3>Intervals</h3>
-
-                                <div class="interval-row">
-
-                                    <input
-                                        type="number"
-                                        value="20"
-                                        min="0"
-                                    >
-
-                                    <div class="interval-tools">
-                                        <span class="interval-tool">↻</span>
-                                        <span class="interval-tool">→</span>
-                                        <span class="interval-tool">•••</span>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
 
                 </section>
-            </section>
+                
 
-            <section class="visual">
+                <section class="visual">
 
                 <h2>VISUAL</h2>
 
@@ -186,54 +187,54 @@
 
                 </div>
 
-            </section>
+                </section>
 
-        </section>
+                </section>
 
-        <section class="sensor-status">
+                <section class="sensor-status">
 
-            <h2>SENSOR ARRAY STATUS</h2>
+                    <h2>SENSOR ARRAY STATUS</h2>
 
-            <div class="sensor-grid">
+                    <div class="sensor-grid">
 
-                <div class="sensor-main">
+                        <div class="sensor-main">
 
-                    <span class="sensor-name">AIR TEMPERATURE</span>
+                            <span class="sensor-name">AIR TEMPERATURE</span>
 
-                    <div class="sensor-values">  
-                        <div class="sensor">   
-                            <span class="sensor-label">°C</span>
-                            <span class="sensor-value">143</span>
-                        </div>
-                    </div> 
-                </div>
-
-                <div class="sensor-group">
-
-                    <span class="sensor-name">GAS CHROMATOGRAPH</span>
-                    <span class="sensor-unit">MOL.%</span>
-
-                    <div class="sensor-values">
-
-                        <div class="sensor">
-                            <span class="sensor-label">CO2</span>
-                            <span class="sensor-value">82.7</span>
+                            <div class="sensor-values">  
+                                <div class="sensor">   
+                                    <span class="sensor-label">°C</span>
+                                    <span class="sensor-value">143</span>
+                                </div>
+                            </div> 
                         </div>
 
-                        <div class="sensor">
-                            <span class="sensor-label">H2S</span>
-                            <span class="sensor-value">63.3</span>
-                        </div>
+                    <div class="sensor-group">
 
-                        <div class="sensor">
-                            <span class="sensor-label">SO2</span>
-                            <span class="sensor-value">17.0</span>
-                        </div>
+                        <span class="sensor-name">GAS CHROMATOGRAPH</span>
+                        <span class="sensor-unit">MOL.%</span>
 
-                        <div class="sensor">
-                            <span class="sensor-label">N</span>
-                            <span class="sensor-value">60.0</span>
-                        </div>
+                        <div class="sensor-values">
+
+                            <div class="sensor">
+                                <span class="sensor-label">CO2</span>
+                                <span class="sensor-value">82.7</span>
+                            </div>
+
+                            <div class="sensor">
+                                <span class="sensor-label">H2S</span>
+                                <span class="sensor-value">63.3</span>
+                            </div>
+
+                            <div class="sensor">
+                                <span class="sensor-label">SO2</span>
+                                <span class="sensor-value">17.0</span>
+                            </div>
+
+                            <div class="sensor">
+                                <span class="sensor-label">N</span>
+                                <span class="sensor-value">60.0</span>
+                            </div>
 
                     </div>
 
