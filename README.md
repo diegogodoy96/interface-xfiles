@@ -23,7 +23,7 @@ Si querés probar la interfaz desde tu computadora, seguí estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com
+   git clone [https://github.com](https://github.com/diegogodoy96/interface-xfiles.git)
    ```
 2. **Dirigite a la carpeta del proyecto:**
    ```bash
