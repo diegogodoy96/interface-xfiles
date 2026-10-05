@@ -1,10 +1,10 @@
 # 🛸 Interfaz X-Files: Firewalker (En proceso)
 
-Una interfaz web estática inspirada en el universo de **The X-Files** (Los Expedientes Secretos X), específicamente en el clásico episodio *Firewalker*. Este proyecto forma parte de mi portafolio personal de desarrollo frontend.
+Una interfaz web estática inspirada en el universo de **The X-Files** (Los Expedientes Secretos X), específicamente en el clásico episodio *Firewalker*(T2E9). Este proyecto forma parte de mi portafolio personal de desarrollo frontend.
 
 El objetivo principal es demostrar habilidades sólidas en la estructura, maquetación y diseño visual utilizando únicamente tecnologías web nativas.
 
-En la carpeta "referencia" guardé unos frames del capítulo "Firewalker" (T2E9) en el cual aparece la interfaz.
+En la carpeta "referencia" guardé unos frames del capítulo en el cual aparece la interfaz en cuestión.
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -13,24 +13,24 @@ En la carpeta "referencia" guardé unos frames del capítulo "Firewalker" (T2E9)
 
 ## 🛠️ Características del Proyecto
 
-* **Diseño Temático:** Estética oscura y de ciencia ficción alineada con la atmósfera de la serie.
+* **Diseño Temático:** Estética oscura y de ciencia ficción alineada con la atmósfera de la serie. Lo que al día de hoy se podría llamar "retro".
 * **Estructura Semántica:** Uso correcto de etiquetas HTML (`<header>`, `<main>`, `<section>`, `<footer>`) para mejorar la accesibilidad.
 * **Código Limpio:** Organización clara de archivos y clases de CSS fáciles de mantener.
 
 ## 📦 Cómo Ejecutar el Proyecto Localmente
 
-Si deseas ver la interfaz en tu computadora, sigue estos pasos:
+Si querés probar la interfaz desde tu computadora, seguí estos pasos:
 
-1. **Clona este repositorio:**
+1. **Clona el repositorio:**
    ```bash
    git clone https://github.com
    ```
-2. **Navega a la carpeta del proyecto:**
+2. **Dirigite a la carpeta del proyecto:**
    ```bash
    cd interfaz-x-files-firewalker
    ```
-3. **Abre el archivo principal:**
-   Busca el archivo `index.html` y dale doble clic para abrirlo en cualquier navegador web (Chrome, Edge, Firefox, etc.).
+3. **Abrí el archivo principal:**
+   Buscá el archivo `index.html` y dale doble clic para abrirlo en cualquier navegador web (Chrome, Edge, Firefox, etc.).
 
 ## 🛠️ Estado del Proyecto & Próximos Pasos (Roadmap)
 
