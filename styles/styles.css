@@ -403,11 +403,10 @@ body {
 
 .system-controls h3 {
     margin: 0 0 10px 0;
-
     font-size: 14px;
     font-weight: normal;
-
     color: #7ca8a0;
+    border: 1px solid #365c55;
 }
 
 .acquisition-control,

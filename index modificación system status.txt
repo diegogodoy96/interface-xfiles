@@ -1,0 +1,105 @@
+                <section class="system-status">
+
+                    <div class="status-title">
+
+                        <h2>SYSTEM STATUS</h2>
+
+                        <span class="status-indicator">▥</span>
+
+                    </div>
+
+                        <div class="system-tools">
+
+                            <span class="tool-icon">◫</span>
+                            <span class="tool-icon">◩</span>
+                            <span class="tool-icon">✥</span>
+
+                        </div>
+
+                        <div class="system-controls">
+
+                            <div class="acquisition-control">
+
+                                <h3>Acquisition</h3>
+
+                                <label>
+                                    <input type="radio" name="acquisition" value="on">
+                                    on
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="acquisition" value="off">
+                                    off
+                                </label>
+
+                            </div>
+
+                            <div class="analysis-control">
+
+                                <h3>Analysis</h3>
+
+                                <label>
+                                    <input type="radio" name="analysis" value="on">
+                                    on
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="analysis" value="off">
+                                    off
+                                </label>
+
+                            </div>
+
+                            <div class="update-control">
+
+                                <h3>Update Period</h3>
+
+                                <div class="update-value">
+                                    <input type="number" value="1.00" step="0.01">
+                                    <span>(sec)</span>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="5"
+                                    value="1"
+                                >
+
+                                <div class="range-labels">
+                                    <span>0</span>
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                </div>
+
+                            </div>
+
+                            <div class="interval-control">
+
+                                <h3>Intervals</h3>
+
+                                <div class="interval-row">
+
+                                    <input
+                                        type="number"
+                                        value="20"
+                                        min="0"
+                                    >
+
+                                    <div class="interval-tools">
+                                        <span class="interval-tool">↻</span>
+                                        <span class="interval-tool">→</span>
+                                        <span class="interval-tool">•••</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </section>
+            </section>
