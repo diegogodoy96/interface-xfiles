@@ -130,15 +130,41 @@ body {
     color: #7ca8a0;
 }
 
+
 .visual h2 {
     margin: 0 0 20px 0;
     font-size: 18px;
     font-weight: normal;
     border-bottom: 1px solid #365c55;
     padding-bottom: 10px;
-    /*centrado de texto*/
     text-align: center;
+    text-shadow: 0 0 6px rgba(124, 168, 160, 0.25);
+
+    /* NUEVO: Permite posicionar las líneas laterales de forma absoluta respecto al título */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espacio libre entre las líneas y la palabra VISUAL */
 }
+
+/* Configuración base para ambos bloques de líneas (Izquierda y Derecha) */
+.visual h2::before,
+.visual h2::after {
+    content: "";
+    width: 45px;
+    height: 5px; /* Reducimos el alto al tamaño justo */
+    
+    /* Dibujamos la línea superior e inferior con bordes reales */
+    border-top: 1px solid #7ca8a0;
+    border-bottom: 1px solid #7ca8a0;
+    
+    /* Dibujamos la línea del medio usando una sombra interna posicionada en el centro */
+    box-shadow: inset 0 2px 0 0 #7ca8a0;
+    
+    opacity: 0.8;
+}
+
+
 
 .visual-screen {
     position: relative;
@@ -154,20 +180,12 @@ body {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(
-            transparent 49%,
-            #18322e 50%,
-            transparent 51%
-        ),
-        linear-gradient(
-            90deg,
-            transparent 49%,
-            #18322e 50%,
-            transparent 51%
-        );
-    background-size: 50px 50px;
+        linear-gradient(to bottom, #18322e 1px, transparent 1px),
+        linear-gradient(to right, #18322e 1px, transparent 1px);
+    background-size: 50px 50px; /* Mantenemos tus 50px originales para no alterar el tamaño de la cuadrícula */
     opacity: 0.7;
 }
+
 
 .target {
     position: absolute;
@@ -735,5 +753,21 @@ body {
     border: 1px solid #365c55;
 }
 
+/* ==========================================================================
+   ESTILOS AISLADOS PARA EL RADAR VECTORIAL (SECCIÓN VISUAL)
+   ========================================================================== */
+.radar-vector-grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: #7ca8a0; 
+    opacity: 0.65; 
+    pointer-events: none; 
+}
+
+.radar-vector-grid circle {
+    filter: drop-shadow(0 0 2px rgba(124, 168, 160, 0.4));
+}
 
 
