@@ -28,7 +28,7 @@ body {
     width: 100%;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #294943;
+    /*border-bottom: 1px solid #294943; lo comento para remover la linea inferior*/
 }
 
 .header-top {
@@ -54,7 +54,12 @@ body {
     min-height: 450px;
 }
 /*-------------*/
-.menu,
+
+.menu { /*para sacarle el borde a los botones de menú*/
+    min-height: 450px;
+    background-color: rgba(5, 15, 13, 0.7);
+}
+
 .system-status,
 .visual {
     min-height: 450px;
@@ -94,10 +99,10 @@ body {
 }
 
 .menu-section span:hover {
-    color: #a3c9c0;
-    background-color: rgba(80, 150, 135, 0.06);
-    border-left-color: #7ca8a0;
-    text-shadow: 0 0 6px rgba(124, 168, 160, 0.3);
+    color: #dae8e5;
+    background-color: rgba(129, 206, 189, 0.06);
+    border-left-color: #dcebe9;
+    text-shadow: 0 0 6px rgba(219, 243, 239, 0.3);
 }
 
 
@@ -235,7 +240,7 @@ body {
     padding-bottom: 8px;
     /*margin-bottom: 8px;*/
     color: #52756e;
-        border-bottom: 1px solid #1d3632;
+        /*border-bottom: 1px solid #1d3632;*/
 
 }
 
@@ -598,6 +603,7 @@ body {
 
     color: #7ca8a0;
     font-size: 11px;
+    background-color: rgba(80, 150, 135, 0.06);
 
     transition:
         color 0.2s ease,
@@ -605,7 +611,7 @@ body {
 }
 
 .interval-tool:hover {
-    /*color: #a3c9c0;*/
+    color: #a3c9c0;
     background-color: rgba(80, 150, 135, 0.06);
 }
 
@@ -680,7 +686,7 @@ body {
 
     padding: 10px;
 
-    border-left: 1px solid #365c55;
+    /*border-left: 1px solid #365c55;*/
     background-color: rgba(5, 15, 13, 0.5);
 
     min-height: 102px;
@@ -695,13 +701,13 @@ body {
 
 .sensor-main .sensor-name {
     padding-bottom: 8px;
-    border-bottom: 1px solid #1d3632;
+    /*border-bottom: 1px solid #1d3632;*/
 }
 
 .sensor-group {
     position: relative;
     padding: 10px;
-    border-left: 1px solid #365c55;
+    /*border-left: 1px solid #365c55;*/
 }
 
 .sensor-unit {
@@ -741,7 +747,7 @@ body {
 .sensor-group .sensor-name {
     display: block;
     padding-bottom: 8px;
-    border-bottom: 1px solid #1d3632;
+    /*border-bottom: 1px solid #1d3632;*/
 }
 
 .sensor-values .sensor-value {
